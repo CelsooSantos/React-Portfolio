@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #050002;
+  --background: #d8d9da;
+  --primary: #cb525c;
+  --secondary: #94ca8c;
+  --accent: #7fbabd;
+  --banner-c1: #f2f2f2;
+  --banner-c2: #cdcbcc;
+  --banner-c3: #999999;
+  --card-background: #e7e6eb;
+  --card-shadow: #0000003b;
 }
 
 @theme inline {
@@ -14,8 +22,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fffafc;
+    --background: #252627;
+    --primary: #ad343e;
+    --secondary: #3d7335;
+    --accent: #427d80;
+    --banner-c1: #1d1d1d;
+    --banner-c2: #4e4f51;
+    --banner-c3: #3c3c3c;
+    --card-background: #151419;
+    --card-shadow: #000000c7;
   }
 }
 
@@ -23,4 +39,127 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.btn--accent {
+  background-color: var(--primary);
+  color: var(--foreground);
+  transform: scale(1);
+  transform-origin: top left;
+  transition: all .3s ease-in-out;
+}
+
+.btn--accent:hover {
+  background-color: var(--accent);
+  color: var(--foreground);
+  transform: scale(1.1);
+}
+
+.banner,
+footer {
+  --size-banner: 200px;
+
+  background:
+    repeating-conic-gradient(from 30deg, #0000 0 120deg, var(--banner-c3) 0 50%) calc(var(--size-banner)/2) calc(var(--size-banner)*tan(30deg)/2),
+    repeating-conic-gradient(from 30deg, var(--banner-c1) 0 60deg, var(--banner-c2) 0 120deg, var(--banner-c3) 0 50%);
+  background-size: var(--size-banner) calc(var(--size-banner)*tan(30deg));
+}
+
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--foreground);
+}
+
+.ribbon {
+  --s: 1.8em;
+  /* the ribbon size */
+  --d: .8em;
+  /* the depth */
+  --c: .8em;
+  /* the cutout part */
+
+  padding: var(--d) calc(var(--s) + 2.5em) 0;
+  line-height: 1.8;
+  background:
+    conic-gradient(from 45deg at left var(--s) top var(--d),
+      #0008 12.5%, #0000 0 37.5%, #0004 0) 0 /50% 100% no-repeat,
+    conic-gradient(from -45deg at right var(--s) top var(--d),
+      #0004 62.5%, #0000 0 87.5%, #0008 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(0 0, calc(var(--s) + var(--d)) 0, calc(var(--s) + var(--d)) var(--d), calc(100% - var(--s) - var(--d)) var(--d), calc(100% - var(--s) - var(--d)) 0, 100% 0, calc(100% - var(--c)) calc(50% - var(--d)/2), 100% calc(100% - var(--d)), calc(100% - var(--s)) calc(100% - var(--d)), calc(100% - var(--s)) 100%, var(--s) 100%, var(--s) calc(100% - var(--d)), 0 calc(100% - var(--d)), var(--c) calc(50% - var(--d)/2));
+  width: fit-content;
+}
+
+.ribbon--primary {
+  background-color: var(--primary);
+  /* the main color */
+}
+
+.ribbon--secondary {
+  background-color: var(--secondary);
+}
+
+.ribbon--accent {
+  background-color: var(--accent);
+}
+
+.project-card {
+  box-shadow: 0.063em 0.75em 1.563em var(--card-shadow);
+  border-radius: 2.25rem;
+}
+
+.project-card--primary {
+  background: radial-gradient(circle at right top,
+      var(--primary) 0%,
+      var(--card-background) 47%,
+      var(--card-background) 100%);
+}
+
+.project-card--secondary {
+  background: radial-gradient(circle at right top,
+      var(--secondary) 0%,
+      var(--card-background) 47%,
+      var(--card-background) 100%);
+}
+
+.project-card--accent {
+  background: radial-gradient(circle at right top,
+      var(--accent) 0%,
+      var(--card-background) 47%,
+      var(--card-background) 100%);
+}
+
+.project-card--default {
+  background: radial-gradient(circle at right top,
+      var(--foreground) 0%,
+      var(--card-background) 47%,
+      var(--card-background) 100%);
+}
+
+footer {
+  box-shadow: 0px 3px 3px 3px var(--foreground);
 }
