@@ -12,7 +12,6 @@ module.exports = {
     'foreground': 'var(--foreground)',
     'background': 'var(--background)',
     'primary': 'var(--primary)',
-    'secondary': 'var(--secondary)',
-    'accent': 'var(--accent)',
+    'secondary': 'var(--secondary)'
   },
 }

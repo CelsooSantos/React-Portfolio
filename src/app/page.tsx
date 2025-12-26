@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Contacts from "./contacto/page";
+import Contacts from "./contacts/page";
 import Banner from "./banner/page";
-import About from "./about/page";
+import Experience from "./experience/page";
 import Skills from "./skills/page";
+import About from "./about/page";
 
 export default function Home() {
   return (
@@ -14,11 +14,13 @@ export default function Home() {
           {/* TODO: add more stuff */}
         </Banner>
         <About
-          title = "Percurso">
+          title = "About me">
         </About>
+        <Experience
+          title = "Experience">
+        </Experience>
         <Skills
           title = "Skills">
-          
         </Skills>
       </main>
       <footer className="p-3">

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ProjectProps } from "@/types/types";
 import { useState } from "react";
 import { motion } from "motion/react";
-import { div } from "motion/react-client";
 
 /**
  * "Formação" = 1,
@@ -14,25 +13,23 @@ import { div } from "motion/react-client";
 function getCat(option: number) {
     switch (option) {
         case 1:
-            return "project-card--primary"
-        case 2:
             return "project-card--secondary"
-        case 3:
-            return "project-card--accent"
+        case 2:
+            return "project-card--primary"
         default:
             return "project-card--default"
     }
 }
 
-export default function Project({ title, src, date, cat, skills }: ProjectProps) {
+export default function Project({ title, subtitle, src, date, cat, skills }: ProjectProps) {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div className={("h-50 rounded-xl p-2 project-card ").concat(getCat(cat))}
+        <div className={("h-50 rounded-xl p-2 project-card text-center ").concat(getCat(cat))}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{ perspective: "1000px" }} >
-            <motion.div className="relative w-full h-full flex items-center justify-center text-center"
+            <motion.div className="relative w-full h-full flex items-center justify-center"
                 animate={{ rotateY: hovered ? 180 : 0 }}
                 transition={{ duration: 0.6 }}
                 style={{
@@ -52,9 +49,10 @@ export default function Project({ title, src, date, cat, skills }: ProjectProps)
                         />
                     </div>
                     <div className="w-1/2">
-                        <div>{title}</div>
+                        <div className="project-card-title text-lg">{title}</div>
+                        <div className="project-card-subtitle text-sm">{subtitle}</div>
                         <br />
-                        <div>{date}</div>
+                        <div className="project-card-date">{date}</div>
                     </div>
                 </div>
 
@@ -69,9 +67,9 @@ export default function Project({ title, src, date, cat, skills }: ProjectProps)
 
                     {
                         skills.length > 0 ? (
-                            <ul className="columns-3">
+                            <ul className="flex flex-wrap">
                                 {skills.map((element, index) => (
-                                    <li key={index} className="">
+                                    <li key={index} className="w-1/3 grow">
                                         {element}
                                     </li>
                                 ))}

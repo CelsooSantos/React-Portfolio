@@ -12,66 +12,72 @@ type SkillLists = {
 
 const skillListsFrontend: SkillLists[] = [{
     id: 0,
-    skillIcon: "./html5.svg",
-    skillName: "HTML"
+    skillIcon: "./bootstrap.svg",
+    skillName: "BootStrap"
 }, {
     id: 1,
     skillIcon: "./css3.svg",
     skillName: "CSS"
 }, {
     id: 2,
-    skillIcon: "./bootstrap.svg",
-    skillName: "BootStrap"
+    skillIcon: "./html5.svg",
+    skillName: "HTML"
 }, {
     id: 3,
-    skillIcon: "./tailwindcss.svg",
-    skillName: "TailwindCSS"
-}, {
-    id: 4,
     skillIcon: "./javascript.svg",
     skillName: "JavaScript"
 }, {
-    id: 5,
-    skillIcon: "./typescript.svg",
-    skillName: "TypeScript"
-}, {
-    id: 6,
+    id: 4,
     skillIcon: "./jQuery.svg",
     skillName: "jQuery"
 }, {
-    id: 7,
-    skillIcon: "./react.svg",
-    skillName: "React"
-}, {
-    id: 8,
+    id: 5,
     skillIcon: "./nextjs-logo.svg",
     skillName: "Next.JS"
+    
+}, {
+    id: 6,
+    skillIcon: "./react.svg",
+    skillName: "React"
+    
+}, {
+    id: 7,
+    skillIcon: "./tailwindcss.svg",
+    skillName: "TailwindCSS"
+}, {
+    id: 8,
+    skillIcon: "./typescript.svg",
+    skillName: "TypeScript"
 }]
 
 const skillsListsBackend: SkillLists[] = [{
     id: 0,
-    skillIcon: "./nodejs.svg",
-    skillName: "Node.js"
+    skillIcon: "./mongodb-icon.svg",
+    skillName: "MongoDB"
+    
 }, {
     id: 1,
-    skillIcon: "./php.svg",
-    skillName: "PHP"
+    skillIcon: "./nodejs.svg",
+    skillName: "Node.js"
+    
 }, {
     id: 2,
-    skillIcon: "./wordpress-icon.svg",
-    skillName: "WordPress"
+    skillIcon: "./php.svg",
+    skillName: "PHP"
+    
 }, {
     id: 3,
+    skillIcon: "./postgresql-icon.svg",
+    skillName: "PostgreSQL"
+    
+}, {
+    id: 4,
     skillIcon: "./woo.svg",
     skillName: "WooCommerce"
 }, {
-    id: 4,
-    skillIcon: "./postgresql-icon.svg",
-    skillName: "PostgreSQL"
-}, {
     id: 5,
-    skillIcon: "./mongodb-icon.svg",
-    skillName: "MongoDB"
+    skillIcon: "./wordpress-icon.svg",
+    skillName: "WordPress"
 }]
 
 const skillListsOOP: SkillLists[] = [{
@@ -84,16 +90,16 @@ const skillListsOOP: SkillLists[] = [{
     skillName: "C++"
 }, {
     id: 2,
-    skillIcon: "./python.svg",
-    skillName: "Python"
+    skillIcon: "./java.svg",
+    skillName: "Java"
 }, {
     id: 3,
     skillIcon: "./kotlin.svg",
     skillName: "Kotlin"
 }, {
     id: 4,
-    skillIcon: "./java.svg",
-    skillName: "Java"
+    skillIcon: "./python.svg",
+    skillName: "Python"
 }]
 
 function skillLists(list: SkillLists[], category: string): ReactNode {
@@ -109,7 +115,7 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 
     return (
         <article>
-            <div className="skillsTitle flex items-center justify-center">{category}</div>
+            <div className="skillsTitle flex items-center justify-center ">{category}</div>
             <div className="grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-5 p-5">
                 {elementHTML}
             </div>
@@ -121,7 +127,7 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 const Skills = ({ title }: SkillsProps) => {
     return (
         <section className='text-center py-5'>
-            <h2 className="ribbon ribbon--secondary mx-auto mb-10">{title}</h2>
+            <h2 className="ribbon ribbon--primary mx-auto mb-10">{title}</h2>
 
             <div className="">
                 {skillLists(skillListsFrontend, "Frontend")}

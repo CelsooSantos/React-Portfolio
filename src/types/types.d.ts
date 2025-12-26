@@ -5,6 +5,7 @@ export type BannerIntroProps = {
 
 type ProjectProps = {
     title: string;
+    subtitle: string;
     src: string;
     date: string;
     cat: Category;
