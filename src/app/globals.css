@@ -151,10 +151,6 @@ footer {
   color: var(--tint);
 }
 
-.skillsTitle {
-  height: 50px;
-}
-
 .skillsTitle::before, .skillsTitle::after {
   content: '';
   display: block;

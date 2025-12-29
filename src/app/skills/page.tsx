@@ -106,7 +106,7 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
     let elementHTML = list.map(
         (item) =>
             <div className="flex items-center justify-start" key={item.id}>
-                <div className="pe-5">
+                <div className="pe-4">
                     <img src={item.skillIcon} alt={item.skillName} className="h-10 w-10" />
                 </div>
                 {item.skillName}
@@ -115,8 +115,8 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 
     return (
         <article>
-            <div className="skillsTitle text-xl flex items-center justify-center ">{category}</div>
-            <div className="grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-5 p-5">
+            <div className="skillsTitle text-xl flex items-center justify-center py-5">{category}</div>
+            <div className="flex flex-wrap justify-around gap-10 p-5">
                 {elementHTML}
             </div>
         </article>
