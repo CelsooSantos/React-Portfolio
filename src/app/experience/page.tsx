@@ -6,9 +6,9 @@ type ExperienceProps = {
 
 const Experience = ({ title }: ExperienceProps) => {
     return (
-        <section className='py-5'>
-            <h2 className="ribbon ribbon--primary mx-auto">{title}</h2>
-            <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5">
+        <section className='px-5 my-10'>
+            <h2 className="title title--primary font-bold text-2xl mx-auto">{title}</h2>
+            <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 py-5">
                 <Project
                     title="Informatics Engineering – Information Systems"
                     subtitle="Master's Degree"
@@ -19,7 +19,7 @@ const Experience = ({ title }: ExperienceProps) => {
                 />
                 <Project
                     title="Web Portfolio"
-                    subtitle="Project"
+                    subtitle="Personal Project"
                     src="/vercel.svg"
                     date="Aug 2025 - Oct 2025"
                     cat={2}

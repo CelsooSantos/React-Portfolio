@@ -24,13 +24,13 @@ export default function BannerIntro({ intro, texts }: BannerIntroProps) {
         <button type="button" className="p-3 px-8 text-lg btn--primary rounded-md">Check my CV</button>
       </a>
       <div className="flex justify-center my-4 gap-4 h-[32]">
-        <a href="https://github.com/CelsooSantos" target="_blank">
+        <a href="https://github.com/CelsooSantos" className="icon-btn" target="_blank">
           <Github strokeWidth={1.5} className="w-full h-full"/>
         </a>
-        <a href="mailto:santoscelso644@gmail.com" target="_blank">
+        <a href="mailto:santoscelso644@gmail.com" className="icon-btn" target="_blank">
           <Mail className="w-full h-full" strokeWidth={1.5}/>
         </a>
-        <a href="https://www.linkedin.com/in/celso-santos-9a48892a1/" target="_blank">
+        <a href="https://www.linkedin.com/in/celso-santos-9a48892a1/" className="icon-btn" target="_blank">
           <Linkedin className="w-full h-full" strokeWidth={1.5} />
         </a>
       </div>

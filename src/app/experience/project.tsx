@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { ProjectProps } from "@/types/types";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { animate, AnimatePresence, motion } from "motion/react";
 
 /**
  * "Formação" = 1,
@@ -22,24 +22,42 @@ function getCat(option: number) {
 }
 
 export default function Project({ title, subtitle, src, date, cat, skills }: ProjectProps) {
-    const [hovered, setHovered] = useState(false);
+    const [isClicked, setIsClicked] = useState(false);
+
+    
+    const handleClick = () => {
+        setIsClicked(current => !current);
+    }
+
+    function handleMouseEnter() {
+        setIsClicked(true);
+    }
+
+    function handleMouseLeave() {
+        setIsClicked(false)
+    }
 
     return (
-        <div className={("h-50 rounded-xl p-2 project-card text-center ").concat(getCat(cat))}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            style={{ perspective: "1000px" }} >
-            <motion.div className="relative w-full h-full flex items-center justify-center"
-                animate={{ rotateY: hovered ? 180 : 0 }}
+        <div className={("rounded-xl p-2 project-card text-center relative ").concat(getCat(cat))}
+            onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            style={{  }} >
+            <motion.div className="relative w-full md:h-full flex items-center justify-center p-2"
+                animate={{ rotateY: isClicked ? 180 : 0 }}
                 transition={{ duration: 0.6 }}
                 style={{
                     transformStyle: "preserve-3d", // necessary to keep front and back
                 }}>
                 {/* FRONT */}
                 <div
-                    className="absolute w-full h-full flex items-center justify-center"
-                    style={{ backfaceVisibility: "hidden" }}>
-                    <div className="w-1/2 h-full relative">
+                    className="front-card w-full h-full flex items-center justify-center flex-wrap sm:flex-nowrap "
+                    style={{ 
+                        backfaceVisibility: "hidden",
+                        // animate={{ rotateY: hovered ? 180: 0 }},
+                        // transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)" ,
+                    }}>
+                    <div className="w-2/3 sm:w-1/2 relative aspect-4/3">
                         <Image
                             className="object-contain mx-auto p-4 rounded-xl"
                             src={src}
@@ -48,7 +66,7 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
                             priority
                         />
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full sm:w-1/2">
                         <div className="project-card-title text-lg">{title}</div>
                         <div className="project-card-subtitle text-sm">{subtitle}</div>
                         <br />
@@ -58,10 +76,11 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
 
                 {/* BACK */}
                 <div
-                    className="absolute w-full h-full flex flex-wrap items-center justify-center"
+                    className="back-card absolute w-full h-full flex flex-wrap items-center justify-center"
                     style={{
+                        top: 0,
                         backfaceVisibility: "hidden",
-                        transform: "rotateY(180deg)",
+                        transform: "rotateY(180deg)" ,
                     }}
                 >
 

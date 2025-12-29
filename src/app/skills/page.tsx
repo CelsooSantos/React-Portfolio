@@ -115,7 +115,7 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 
     return (
         <article>
-            <div className="skillsTitle flex items-center justify-center ">{category}</div>
+            <div className="skillsTitle text-xl flex items-center justify-center ">{category}</div>
             <div className="grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-5 p-5">
                 {elementHTML}
             </div>
@@ -126,10 +126,10 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 
 const Skills = ({ title }: SkillsProps) => {
     return (
-        <section className='text-center py-5'>
-            <h2 className="ribbon ribbon--primary mx-auto mb-10">{title}</h2>
+        <section className='text-center px-5 my-10'>
+            <h2 className="title title--primary font-bold text-2xl mx-auto">{title}</h2>
 
-            <div className="">
+            <div className="py-5">
                 {skillLists(skillListsFrontend, "Frontend")}
             
                 {skillLists(skillsListsBackend, "Backend and Databases")}
