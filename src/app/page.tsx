@@ -3,6 +3,7 @@ import Banner from "./banner/page";
 import Experience from "./experience/page";
 import Skills from "./skills/page";
 import About from "./about/page";
+import Buttons from "./buttons/page";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Skills
           title = "Skills">
         </Skills>
+        <Buttons />
       </main>
       <footer className="p-3">
         <Contacts></Contacts>
