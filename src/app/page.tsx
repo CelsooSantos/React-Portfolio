@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       <main className="">
+        <Buttons />
         <Banner
           intro = "Welcome! I'm a" 
           texts = { ["Web Developer", "Tech Enthusiast!!!", "Fullstack Learner"] }  >
@@ -23,7 +24,6 @@ export default function Home() {
         <Skills
           title = "Skills">
         </Skills>
-        <Buttons />
       </main>
       <footer className="p-3">
         <Contacts></Contacts>

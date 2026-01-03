@@ -1,10 +1,27 @@
+"use client";
+import { useEffect } from "react";
 import Project from "./project";
+import Buttons from "../buttons/page";
 
 type ExperienceProps = {
     title: string;
 };
 
 const Experience = ({ title }: ExperienceProps) => {
+    
+    useEffect(() => {
+        const fetchData = async() => {
+            if (document.body.classList.contains('dark-mode')) {
+                console.log('Element contains class');
+            } else {
+                console.log('Element does NOT contain class');
+                console.log(document.body);
+                console.log(document.body.classList);
+            }
+        }
+        fetchData();
+    }, [Buttons]);
+
     return (
         <section className='px-5 my-10'>
             <h2 className="title title--primary font-bold text-2xl mx-auto">{title}</h2>

@@ -23,6 +23,7 @@ const Buttons = () => {
             mediaQuery.removeEventListener('change', handleChange);
         };
     }, []);
+
     useEffect(() => {
         if (isDarkMode) {
             document.body.classList.add('dark-mode');
@@ -40,13 +41,13 @@ const Buttons = () => {
     };
 
   return (
-    <div className='fixed bottom-5 right-5 p-3 rounded-2xl' style={{ backgroundColor: "var(--shadow)" }}>
+    <div className='fixed bottom-5 right-5 p-3 rounded-2xl z-1' style={{ backgroundColor: "var(--shadow)" }}>
         <DarkModeSwitch
             checked={isDarkMode}
             onChange={toggleDarkMode}
             size={24}
             moonColor='var(--foreground)'
-            sunColor='var(--background)'
+            sunColor='var(--foreground)'
         />
     </div>
   );

@@ -54,8 +54,6 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
                     className="front-card w-full h-full flex items-center justify-center flex-wrap sm:flex-nowrap "
                     style={{ 
                         backfaceVisibility: "hidden",
-                        // animate={{ rotateY: hovered ? 180: 0 }},
-                        // transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)" ,
                     }}>
                     <div className="w-2/3 sm:w-1/2 relative aspect-4/3">
                         <Image
@@ -83,7 +81,6 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
                         transform: "rotateY(180deg)" ,
                     }}
                 >
-
                     {
                         skills.length > 0 ? (
                             <ul className="flex flex-wrap">
