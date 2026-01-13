@@ -37,7 +37,7 @@ const Experience = ({ title }: ExperienceProps) => {
                 <Project
                     title="Web Portfolio"
                     subtitle="Personal Project"
-                    src="/vercel.svg"
+                    src="/web-logo.svg"
                     date="Aug 2025 - Oct 2025"
                     cat={2}
                     skills={["Next.js", "React", "TypeScript", "Tailwind CSS"]}
