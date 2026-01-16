@@ -1,12 +1,10 @@
 "use client";
 import { BannerIntroProps } from "@/types/types";
-import React from "react";
 import { ReactTyped } from "react-typed";
 import { Github, Linkedin, Mail } from 'lucide-react';
 
-
 export default function BannerIntro({ intro, texts }: BannerIntroProps) {
-  const curriculumPDF = "./sample-local-pdf.pdf"
+  const curriculumPDF = "./sample-local-pdf.pdf";
   return (
     <div className="text-center w-full p-5 absolute flex flex-col justify-between items-center">
       <h1 className="text-3xl font-bold text-shadow-lg ">
