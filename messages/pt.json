@@ -1,5 +1,49 @@
 {
     "Banner": {
-        "title": "Bem vindo! Eu sou"
+        "title": "Bem-vindo! Eu sou",
+        "text1": "Desenvolver Web",
+        "text2": "Tech Enthusiast!!!",
+        "text3": "Fullstack Learner",
+        "button": "Vê o meu CV"
+    },
+    "About": {
+        "title": "Sobre mim",
+        "text1": "Chamo-me",
+        "bold1": "Celso Santos",
+        "text2": ". Atualmente, tenho mais experiência em",
+        "bold2": "desenvolvimento web",
+        "text3": ", devido ao meu primeiro estágio, mas desejo expandir mais o meu conhecimento para mais áreas como",
+        "bold3": "programação orientada a objetos",
+        "text4": ",",
+        "bold4": "backend",
+        "text5": "e muito mais. Atualmente estou a fazer",
+        "bold5": "mestrado",
+        "text6": "para ganhar mais compreensão em diferentes tópicos relacionados a tecnologias. Estou curioso e entusiasmado para aprender e conhecer mais e mais."
+    },
+    "Experience": {
+        "title": "Experiência",
+        "Experience1": {
+            "title": "Engenharia Informática",
+            "subtitle": "Licenciatura",
+            "date": "Set 2021 - Jul 2024"
+        },
+        "Experience2": {
+            "title": "Desenvolvedor de Software",
+            "subtitle": "Estagiário",
+            "date": "Dez 2024 - Jun 2025"
+        },
+        "Experience3": {
+            "title": "Portfólio Web",
+            "subtitle": "Projeto Pessoal",
+            "date": "Ago 2025 - Out 2025"
+        },
+        "Experience4": {
+            "title": "Engenharia Informática - Sistemas de Informação",
+            "subtitle": "Mestrado",
+            "date": "Em progresso..."
+        }
+    },
+    "Skills": {
+        "title": "Skills"
     }
 }

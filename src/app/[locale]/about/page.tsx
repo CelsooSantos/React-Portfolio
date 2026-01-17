@@ -1,12 +1,21 @@
+import {useTranslations} from 'next-intl';
+
 type AboutProps = {
     title: string;
 };
 
 const About = ({ title }: AboutProps) => {
+    const aboutT = useTranslations('About');
+    
     return (
         <section className='text-center px-5 my-10'>
             <h2 className="title title--primary font-bold text-2xl mx-auto">{title}</h2>
-            <p className="my-5 text-center about-description"> I'm <strong>Celso Santos</strong>. Currently, I have more experience in <strong>web development</strong>, due to my first intership, but I wish to expand my knowledge to other areas such as <strong>OOP languages</strong>, <strong>backend</strong>, <strong>AI</strong> and much more. I'm currently working on my <strong>master's degree</strong> to precisely gain comprehension on different tech topics. I am curious and excited to learn and experience more and more.  </p> 
+            <p className="my-5 text-center about-description"> 
+                {aboutT('text1')} <strong>{aboutT('bold1')}</strong>
+                {aboutT('text2')} <strong>{aboutT('bold2')}</strong>
+                {aboutT('text3')} <strong>{aboutT('bold3')}</strong>
+                {aboutT('text4')} <strong>{aboutT('bold4')}</strong> {aboutT('text5')} <strong>{aboutT('bold5')}</strong> {aboutT('text6')}
+            </p> 
         </section>
     );
 };

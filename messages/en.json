@@ -1,5 +1,49 @@
 {
     "Banner": {
-        "title": "Welcome! I'm a"
+        "title": "Welcome! I'm a",
+        "text1": "Web Developer",
+        "text2": "Tech Enthusiast!!!",
+        "text3": "Fullstack Learner",
+        "button": "Check my CV"
+    },
+    "About": {
+        "title": "About me",
+        "text1": "I'm",
+        "bold1": "Celso Santos",
+        "text2": ". Currently, I have more experience in",
+        "bold2": "web development",
+        "text3": ", due to my first intership, but I wish to expand my knowledge to other areas such as",
+        "bold3": "OOP languages",
+        "text4": ",",
+        "bold4": "backend",
+        "text5": "and much more. I'm currently working on my",
+        "bold5": "master's degree",
+        "text6": "to precisely gain comprehension on different tech topics. I am curious and excited to learn and experience more and more."
+    },
+    "Experience": {
+        "title": "Experience",
+        "Experience1": {
+            "title": "Computer Sciences Engineering",
+            "subtitle": "Bachelor Degree",
+            "date": "Sep 2021 - Jul 2024"
+        },
+        "Experience2": {
+            "title": "Software Developer",
+            "subtitle": "Intern",
+            "date": "Dec 2024 - Jun 2025"
+        },
+        "Experience3": {
+            "title": "Web Portfolio",
+            "subtitle": "Personal Project",
+            "date": "Aug 2025 - Oct 2025"
+        },
+        "Experience4": {
+            "title": "Informatics Engineering – Information Systems",
+            "subtitle": "Master's Degree",
+            "date": "On going..."
+        }
+    },
+    "Skills": {
+        "title": "Skills"
     }
 }

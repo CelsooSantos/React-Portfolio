@@ -10,7 +10,6 @@ const Contacts = () => {
                 </a>
             </div>
             <div className='flex items-center gap-2 icon-element'>
-                
                 <a target="_blank" href="mailto:santoscelso644@gmail.com" className='inline-flex items-center gap-2'>
                     <Mail size={20} strokeWidth={1.5} />
                     santoscelso644@gmail.com
