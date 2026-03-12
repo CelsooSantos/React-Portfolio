@@ -4,6 +4,8 @@ import "./globals.css";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import { ThemeProvider } from "next-themes";
+import { getMessages } from 'next-intl/server';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,20 +21,7 @@ export const metadata: Metadata = {
   title: "Portfolio",
   description: "Made by Celso Santos",
 };
-/*
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </body>
-    </html>
-  );
-}*/
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{locale: string}>;
@@ -44,11 +33,15 @@ export default async function LocaleLayout({children, params}: Props) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
- 
+  const messages = await getMessages();
   return (
-    <html>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

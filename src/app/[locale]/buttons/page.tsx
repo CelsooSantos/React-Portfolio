@@ -1,56 +1,65 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+// IMPORTANTE: Use o SEU arquivo de navegação
+import { useRouter, usePathname } from '@/i18n/navigation'; 
+import { useLocale } from 'next-intl';
+import { useTheme } from 'next-themes';
 
-const Buttons = () => {    
-    const [isDarkMode, setDarkMode] = useState(false);
+const Buttons = () => { 
+    const router = useRouter();
+    const pathname = usePathname();
+    const locale = useLocale();
+    
+    const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
+    // Garante que o componente só renderiza depois de montar no cliente
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setDarkMode(mediaQuery.matches)
-
-        const handleChange = (e: MediaQueryListEvent) => {
-            setDarkMode(e.matches);
-        };
-
-        mediaQuery.addEventListener('change', handleChange);
-        // Add listener to update styles
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => toggleDarkMode(e.matches ? false : true));
-
-
-        // Remove listener
-        return () => {
-            mediaQuery.removeEventListener('change', handleChange);
-        };
+        setMounted(true);
     }, []);
 
-    useEffect(() => {
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-        }
-    }, [isDarkMode]);
+    function changeLanguage(nextLocale: string) {
+    if (!document.startViewTransition) {
+        router.replace(pathname, { locale: nextLocale });
+        return;
+    }
 
-    const toggleDarkMode = (checked: boolean) => {
-        setDarkMode(checked);
-        if (isDarkMode)
-            document.body.classList.add('dark-mode')
-        else
-            document.body.classList.remove('dark-mode')
-    };
+    document.startViewTransition(() => {
+        router.replace(pathname, { locale: nextLocale });
+    });
+}
 
-  return (
-    <div className='fixed bottom-5 right-5 p-3 rounded-2xl z-1' style={{ backgroundColor: "var(--shadow)" }}>
-        <DarkModeSwitch
-            checked={isDarkMode}
-            onChange={toggleDarkMode}
-            size={24}
-            moonColor='var(--foreground)'
-            sunColor='var(--foreground)'
-        />
-    </div>
-  );
+    if (!mounted) return null;
+
+    const isDarkMode = resolvedTheme === 'dark';
+
+    return (
+        <div className='fixed bottom-5 right-5 z-[9999]'>
+            {/* Botão Dark Mode */}
+            <div className='p-3 rounded-2xl mb-3 switchMode' style={{ backgroundColor: "var(--shadow)" }}>
+                <DarkModeSwitch
+                    checked={isDarkMode}
+                    onChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                    size={24}
+                    moonColor='var(--foreground)'
+                    sunColor='var(--foreground)'
+                />
+            </div>
+            
+            <div className='p-3 rounded-2xl switchMode' style={{ backgroundColor: "var(--shadow)" }}>
+                {locale === 'pt' ? (
+                    <button  className="cursor-pointer font-bold"> 
+                        <a href="/en">EN</a>
+                    </button>
+                ) : (
+                    <button  className="cursor-pointer font-bold"> 
+                        <a href="/pt">PT</a>
+                    </button>
+                )}
+            </div>
+        </div>
+    );
 };
 
 export default Buttons;
