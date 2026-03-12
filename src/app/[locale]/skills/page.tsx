@@ -28,7 +28,7 @@ const skillListsFrontend: SkillLists[] = [{
     skillName: "JavaScript"
 }, {
     id: 4,
-    skillIcon: "./jQuery.svg",
+    skillIcon: "./jquery.svg",
     skillName: "jQuery"
 }, {
     id: 5,
