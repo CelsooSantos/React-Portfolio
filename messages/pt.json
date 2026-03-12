@@ -1,9 +1,9 @@
 {
     "Banner": {
         "title": "Bem-vindo! Eu sou",
-        "text1": "Desenvolver Web",
-        "text2": "Tech Enthusiast!!!",
-        "text3": "Fullstack Learner",
+        "text1": "Solucionador de Problemas",
+        "text2": "Entusiasta por Tecnologia!!!",
+        "text3": "Aprendiz FullStack",
         "button": "Vê o meu CV"
     },
     "About": {
@@ -35,7 +35,7 @@
         "Experience3": {
             "title": "Portfólio Web",
             "subtitle": "Projeto Pessoal",
-            "date": "Ago 2025 - Out 2025"
+            "date": "Mar 2026"
         },
         "Experience4": {
             "title": "Engenharia Informática - Sistemas de Informação",

@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function BannerIntro({ intro, texts }: BannerIntroProps) {
-  const curriculumPDF = "./sample-local-pdf.pdf";
+  const curriculumPDF = "./curriculo.pdf";
   const bannerT = useTranslations('Banner');
   return (
     <div className="text-center w-full p-5 absolute flex flex-col justify-between items-center">

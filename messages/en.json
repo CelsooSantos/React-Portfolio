@@ -1,9 +1,9 @@
 {
     "Banner": {
         "title": "Welcome! I'm a",
-        "text1": "Web Developer",
+        "text1": "Problem Solver",
         "text2": "Tech Enthusiast!!!",
-        "text3": "Fullstack Learner",
+        "text3": "FullStack Aspirant",
         "button": "Check my CV"
     },
     "About": {
@@ -35,7 +35,7 @@
         "Experience3": {
             "title": "Web Portfolio",
             "subtitle": "Personal Project",
-            "date": "Aug 2025 - Oct 2025"
+            "date": "Mar 2026"
         },
         "Experience4": {
             "title": "Informatics Engineering – Information Systems",

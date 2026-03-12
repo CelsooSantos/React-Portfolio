@@ -4,12 +4,6 @@ import { ProjectProps } from "@/types/types";
 import { useState } from "react";
 import { animate, AnimatePresence, motion } from "motion/react";
 
-/**
- * "Formação" = 1,
- * "Experiências Profissionais" = 2, 
- * "Projetos Pessoais" = 3
- */
-
 function getCat(option: number) {
     switch (option) {
         case 1:
