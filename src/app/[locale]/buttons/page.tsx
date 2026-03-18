@@ -49,12 +49,12 @@ const Buttons = () => {
             
             <div className='p-3 rounded-2xl switchMode' style={{ backgroundColor: "var(--shadow)" }}>
                 {locale === 'pt' ? (
-                    <button  className="cursor-pointer font-bold"> 
-                        <a href="/en">EN</a>
+                    <button className="cursor-pointer font-bold aspect-square w-[24px]"> 
+                        <a href="/en" lang="en" hrefLang="en" aria-label="Visit site in english">EN</a>
                     </button>
                 ) : (
-                    <button  className="cursor-pointer font-bold"> 
-                        <a href="/pt">PT</a>
+                    <button className="cursor-pointer font-bold aspect-square w-[24px]"> 
+                        <a href="/pt" lang="pt" hrefLang="pt" aria-label="Visita o website em português">PT</a>
                     </button>
                 )}
             </div>

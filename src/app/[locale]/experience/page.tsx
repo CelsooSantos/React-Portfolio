@@ -24,8 +24,8 @@ const Experience = ({ title }: ExperienceProps) => {
     }, [Buttons]);
 
     const experienceT = useTranslations('Experience');
-    const experiences = ["Experience1", "Experience2", "Experience3", "Experience4"];
-    const experiencesValues = ["title", "subtitle", "date"];
+    const experiences = ["Experience1", "Experience2", "Experience3", "Experience4"]; //Adding experiences requires also adding the title here 
+    const experiencesValues = ["title", "subtitle", "date", "altImage"]; // Adding new properties requires adding the title here
     let i, j;
     let xpT = new Map();
     let xpValues = [];
@@ -48,6 +48,7 @@ const Experience = ({ title }: ExperienceProps) => {
                     date={xpT.get(3)[2]}
                     cat={1}
                     skills={[]}
+                    altImage={xpT.get(3)[3]}
                 />
                 <Project
                     title={xpT.get(2)[0]}
@@ -56,6 +57,7 @@ const Experience = ({ title }: ExperienceProps) => {
                     date={xpT.get(2)[2]}
                     cat={2}
                     skills={["Next.js", "React", "TypeScript", "Tailwind CSS"]}
+                    altImage={xpT.get(2)[3]}
                 />
                 <Project
                     title={xpT.get(1)[0]}
@@ -64,6 +66,7 @@ const Experience = ({ title }: ExperienceProps) => {
                     date={xpT.get(1)[2]}
                     cat={1}
                     skills={["WordPress", "WooCommerce", "PHP", "HTML", "CSS", "JavaScript", "jQuery", "Laragon", "BootStrap"]}
+                    altImage={xpT.get(1)[3]}
                 />
                 <Project
                     title={xpT.get(0)[0]}
@@ -72,6 +75,7 @@ const Experience = ({ title }: ExperienceProps) => {
                     date={xpT.get(0)[2]}
                     cat={1}
                     skills={["HTML", "CSS", "JavaScript", "BootStrap", "Node.js", "C", "C++", "Python", "PostreSQL", "MongoDB", "PHP", "Java", "Kotlin"]}
+                    altImage={xpT.get(0)[3]}
                 />
             </div>
         </section>

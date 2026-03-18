@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 type SkillsProps = {
@@ -102,7 +103,7 @@ const skillListsOOP: SkillLists[] = [{
     skillName: "Python"
 }]
 
-function skillLists(list: SkillLists[], category: string): ReactNode {
+function skillLists(list: SkillLists[], category: any): ReactNode {
     let elementHTML = list.map(
         (item) =>
             <div className="flex items-center justify-start" key={item.id}>
@@ -125,16 +126,17 @@ function skillLists(list: SkillLists[], category: string): ReactNode {
 }
 
 const Skills = ({ title }: SkillsProps) => {
+    const t = useTranslations('Skills');
     return (
         <section className='text-center px-5 my-10'>
             <h2 className="title title--primary font-bold text-2xl mx-auto">{title}</h2>
 
             <div className="py-5">
-                {skillLists(skillListsFrontend, "Frontend")}
+                {skillLists(skillListsFrontend,  t('category1') )}
             
-                {skillLists(skillsListsBackend, "Backend and Databases")}
+                {skillLists(skillsListsBackend,  t('category2') )}
             
-                {skillLists(skillListsOOP, "Object-Oriented Programming")}
+                {skillLists(skillListsOOP, t('category3') )}
             </div>
         </section>
     );

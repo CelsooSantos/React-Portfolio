@@ -2,7 +2,7 @@
 
 :root {
   --foreground: hsl(336, 3%, 2%);
-  --tint:  hsl(336, 3%, 25%);
+  --tint:  hsl(336, 3%, 22%);
   --shadow: hsl(336, 3%, 93%);
   --background: hsl(336, 3%, 90%);
   --primary: hsl(182, 19%, 40%);
@@ -20,7 +20,7 @@
 
 .dark {
   --foreground: hsl(336, 3%, 98%);
-  --tint:  hsl(336, 3%, 75%);
+  --tint:  hsl(336, 3%, 78%);
   --shadow: hsl(336, 3%, 7%);
   --background: hsl(336, 3%, 10%);
   --primary: hsl(182, 19%, 40%);

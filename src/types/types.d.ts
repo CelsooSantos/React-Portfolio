@@ -10,4 +10,5 @@ type ProjectProps = {
     date: string;
     cat: Category;
     skills: string[];
+    altImage: string;
 };

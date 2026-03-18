@@ -20,17 +20,18 @@ export default function BannerIntro({ intro, texts }: BannerIntroProps) {
         loop
       >
       </ReactTyped>
+      <div className="hidden"> { bannerT('text1') }, { bannerT('text2') }, { bannerT('text3') } </div>
       <a href={curriculumPDF} target="_blank" type="button">
         <button type="button" className="p-3 px-8 text-lg btn--primary rounded-md">{ bannerT('button') }</button>
       </a>
       <div className="flex justify-center my-4 gap-4 h-[32]">
-        <a href="https://github.com/CelsooSantos" className="icon-btn" target="_blank">
+        <a href="https://github.com/CelsooSantos" className="icon-btn" target="_blank" aria-label={bannerT('label1')}>
           <Github strokeWidth={1.5} className="w-full h-full"/>
         </a>
-        <a href="mailto:santoscelso644@gmail.com" className="icon-btn" target="_blank">
+        <a href="mailto:santoscelso644@gmail.com" className="icon-btn" target="_blank" aria-label={bannerT('label2')}>
           <Mail className="w-full h-full" strokeWidth={1.5}/>
         </a>
-        <a href="https://www.linkedin.com/in/celso-santos-9a48892a1/" className="icon-btn" target="_blank">
+        <a href="https://www.linkedin.com/in/celso-santos-9a48892a1/" className="icon-btn" target="_blank" aria-label={bannerT('label3')}>
           <Linkedin className="w-full h-full" strokeWidth={1.5} />
         </a>
       </div>

@@ -4,7 +4,10 @@
         "text1": "Problem Solver",
         "text2": "Tech Enthusiast!!!",
         "text3": "FullStack Aspirant",
-        "button": "Check my CV"
+        "button": "Check my CV",
+        "label1": "Check my Github",
+        "label2": "Check my email",
+        "label3": "Check my LinkedIn"
     },
     "About": {
         "title": "About me",
@@ -22,28 +25,36 @@
     },
     "Experience": {
         "title": "Experience",
+        "defaultText": "Nothing here yet...",
         "Experience1": {
             "title": "Computer Sciences Engineering",
             "subtitle": "Bachelor Degree",
-            "date": "Sep 2021 - Jul 2024"
+            "date": "Sep 2021 - Jul 2024",
+            "altImage": "Logo of the Viseu School of Technology and Management"
         },
         "Experience2": {
             "title": "Software Developer",
             "subtitle": "Intern",
-            "date": "Dec 2024 - Jun 2025"
+            "date": "Dec 2024 - Jun 2025",
+            "altImage": "Celeuma creative agency logo"
         },
         "Experience3": {
             "title": "Web Portfolio",
             "subtitle": "Personal Project",
-            "date": "Mar 2026"
+            "date": "Mar 2026",
+            "altImage": "Website logo"
         },
         "Experience4": {
             "title": "Informatics Engineering – Information Systems",
             "subtitle": "Master's Degree",
-            "date": "On going..."
+            "date": "On going...",
+            "altImage": "Logo of the Viseu School of Technology and Management"
         }
     },
     "Skills": {
-        "title": "Skills"
+        "title": "Skills",
+        "category1": "Frontend",
+        "category2": "Backend and Databases",
+        "category3": "Object-Oriented Programming"
     }
 }

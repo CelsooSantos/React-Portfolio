@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { ProjectProps } from "@/types/types";
 import { useState } from "react";
-import { animate, AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
+import {useTranslations} from 'next-intl';
 
 function getCat(option: number) {
     switch (option) {
@@ -15,7 +16,7 @@ function getCat(option: number) {
     }
 }
 
-export default function Project({ title, subtitle, src, date, cat, skills }: ProjectProps) {
+export default function Project({ title, subtitle, src, date, cat, skills, altImage }: ProjectProps) {
     const [isClicked, setIsClicked] = useState(false);
 
     
@@ -23,19 +24,10 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
         setIsClicked(current => !current);
     }
 
-    function handleMouseEnter() {
-        setIsClicked(true);
-    }
-
-    function handleMouseLeave() {
-        setIsClicked(false)
-    }
-
+    const t = useTranslations('Experience');
     return (
         <div className={("rounded-xl p-2 project-card text-center relative ").concat(getCat(cat))}
             onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             style={{  }} >
             <motion.div className="relative w-full md:h-full flex items-center justify-center p-2"
                 animate={{ rotateY: isClicked ? 180 : 0 }}
@@ -53,16 +45,16 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
                         <Image
                             className="object-contain mx-auto p-4 rounded-xl"
                             src={src}
-                            alt={title}
+                            alt={altImage}
                             fill={true}
                             priority
                         />
                     </div>
                     <div className="w-full sm:w-1/2">
                         <div className="project-card-title text-lg">{title}</div>
-                        <div className="project-card-subtitle text-sm">{subtitle}</div>
+                        <div className="project-card-subtitle text-md">{subtitle}</div>
                         <br />
-                        <div className="project-card-date">{date}</div>
+                        <div className="project-card-date text-md">{date}</div>
                     </div>
                 </div>
 
@@ -85,7 +77,7 @@ export default function Project({ title, subtitle, src, date, cat, skills }: Pro
                                 ))}
                             </ul>
                         ) : (
-                            <div className="">Nothing here yet...</div>
+                            <div className="">{ t('defaultText')}</div>
                         )
                     }
                 </div>
