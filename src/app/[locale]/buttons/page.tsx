@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-// IMPORTANTE: Use o SEU arquivo de navegação
 import { useRouter, usePathname } from '@/i18n/navigation'; 
 import { useLocale } from 'next-intl';
 import { useTheme } from 'next-themes';
+
 
 const Buttons = () => { 
     const router = useRouter();
@@ -14,21 +14,9 @@ const Buttons = () => {
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
-    // Garante que o componente só renderiza depois de montar no cliente
     useEffect(() => {
         setMounted(true);
     }, []);
-
-    function changeLanguage(nextLocale: string) {
-    if (!document.startViewTransition) {
-        router.replace(pathname, { locale: nextLocale });
-        return;
-    }
-
-    document.startViewTransition(() => {
-        router.replace(pathname, { locale: nextLocale });
-    });
-}
 
     if (!mounted) return null;
 
@@ -50,11 +38,11 @@ const Buttons = () => {
             <div className='p-3 rounded-2xl switchMode' style={{ backgroundColor: "var(--shadow)" }}>
                 {locale === 'pt' ? (
                     <button className="cursor-pointer font-bold aspect-square w-[24px]"> 
-                        <a href="/en" lang="en" hrefLang="en" aria-label="Visit site in english">EN</a>
+                        <a href={"/en/" + pathname} lang="en" hrefLang="en" aria-label="Visit site in english">EN</a>
                     </button>
                 ) : (
                     <button className="cursor-pointer font-bold aspect-square w-[24px]"> 
-                        <a href="/pt" lang="pt" hrefLang="pt" aria-label="Visita o website em português">PT</a>
+                        <a href={"/pt/" + pathname} lang="pt" hrefLang="pt" aria-label="Visita o website em português">PT</a>
                     </button>
                 )}
             </div>

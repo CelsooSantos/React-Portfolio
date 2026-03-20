@@ -115,7 +115,7 @@ footer {
 }
 
 .icon-element {
-  border-bottom: 0px solid var(--primary);
+  border-bottom: 2px solid transparent;
   cursor: pointer;
 }
 
@@ -172,4 +172,8 @@ footer {
   height: 2px;
   background-color: var(--secondary);
   margin: 0 2rem;
+}
+
+.privacy-sublist li::marker {
+  color: var(--primary);
 }

@@ -56,5 +56,36 @@
         "category1": "Frontend",
         "category2": "Backend and Databases",
         "category3": "Object-Oriented Programming"
+    },
+    "Privacy": {
+        "navigation": "Homepage",
+        "title": "Privacy Policy",
+        "subtitle": "Last Updated: March 20, 2026",
+        "section1": {
+            "title": "Data Collection",
+            "text1": "We value your privacy. This website does",
+            "bold1": "not",
+            "text2": "collect, store, or share any personal information (such as your name, email, or IP address) in a way that can identify you."
+        },
+        "section2": {
+            "title": "Analytics",
+            "text1": "We use",
+            "bold1": "Vercel Analytics",
+            "text2": "to understand how visitors interact with our site.",
+            "list": {
+                "title1": "Privacy First",
+                "text1": "This tool is cookieless. No cookies are stored on your device.",
+                "title2": "Anonymization",
+                "text2": "All data is aggregated and anonymized. We cannot track your individual browsing behavior across other sites or identify who you are.",
+                "title3": "Purpose",
+                "text3": "We use this data solely to improve site performance and content."
+            }
+        },
+        "section3": {
+            "title": "Third Parties",
+            "text1": "This site is hosted on",
+            "bold1": "Vercel.",
+            "text2": "They may process basic technical logs (like request headers) to deliver the website to you securely, but this data is not used by us for tracking."
+        }
     }
 }

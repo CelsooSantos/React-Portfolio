@@ -56,5 +56,36 @@
         "category1": "Frontend",
         "category2": "Backend e Bases de Dados",
         "category3": "Programação Orientada a Objetos"
+    },
+    "Privacy": {
+        "navigation": "Página Inicial",
+        "title": "Política de privacidade",
+        "subtitle": "Última atualização: 20 Março de 2026",
+        "section1": {
+            "title": "Recolha de Dados",
+            "text1": "Valorizamos a sua privacidade. Este website",
+            "bold1": "não",
+            "text2": "recolhe, armazena ou partilha qualquer informação pessoal (como o seu nome, e-mail ou endereço IP) de forma a que o possa identificar."
+        },
+        "section2": {
+            "title": "Analítica",
+            "text1": "Utilizamos o",
+            "bold1": "Vercel Analytics",
+            "text2": "para compreender como os visitantes interagem com o nosso site.",
+            "list": {
+                "title1": "Privacidade em Primeiro Lugar",
+                "text1": "Esta ferramenta não utiliza cookies. Não são armazenados cookies no seu dispositivo.",
+                "title2": "Anonimização",
+                "text2": "Todos os dados são agregados e anonimizados. Não conseguimos monitorizar o seu comportamento de navegação individual noutros sites nem identificar quem você é.",
+                "title3": "Finalidade",
+                "text3": "Utilizamos estes dados exclusivamente para melhorar o desempenho e o conteúdo do site."
+            }
+        },
+        "section3": {
+            "title": "Terceiros",
+            "text1": "Este site é alojado na",
+            "bold1": "Vercel.",
+            "text2": "Eles podem processar registos técnicos básicos (como cabeçalhos de pedidos) para lhe entregar o website de forma segura, mas estes dados não são utilizados por nós para fins de rastreio."
+        }
     }
 }

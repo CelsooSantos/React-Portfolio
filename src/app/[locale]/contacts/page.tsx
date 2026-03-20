@@ -1,6 +1,8 @@
 import { Github, Linkedin, Mail, MapPinHouse } from 'lucide-react';
+import {useTranslations} from 'next-intl';
 
 const Contacts = () => {
+    const t = useTranslations('Privacy');
     return (
         <div className='flex gap-[24px] flex-wrap items-center justify-center'>
             <div className='flex items-center gap-2 icon-element'>
@@ -26,6 +28,11 @@ const Contacts = () => {
                     <MapPinHouse size={20} strokeWidth={1.5} />
                     Viseu, Portugal
                 </span>
+            </div>
+            <div className='icon-element'>
+                <a href="/privacy">
+                    {t('title')}
+                </a>
             </div>
         </div>
     );
