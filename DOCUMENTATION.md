@@ -1,3 +1,5 @@
+[**Main Overview**](#) | [**Technical Documentation**](./docs/documentation.md)
+
 # Project Documentation
 
 This documentation provides a technical overview of the website's structure, component logic, and internationalization workflow.
