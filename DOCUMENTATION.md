@@ -1,5 +1,4 @@
 [**Main Overview**](./README.md) | [**Technical Documentation**](#)
-=======
 
 # Project Documentation
 
