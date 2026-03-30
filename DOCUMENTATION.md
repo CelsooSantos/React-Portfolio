@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 [**Main Overview**](./README.md) | [**Technical Documentation**](#)
 =======
-[**Main Overview**](./readme.md) | [**Technical Documentation**](#)
->>>>>>> ab2eb0c4bc04f2a569a1f784c4084a08e0817fbb
 
 # Project Documentation
 

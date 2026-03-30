@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 [**Main Overview**](#) | [**Technical Documentation**](./DOCUMENTATION.md)
 =======
-[**Main Overview**](#) | [**Technical Documentation**](./documentation.md)
->>>>>>> ab2eb0c4bc04f2a569a1f784c4084a08e0817fbb
 
 Hi, I’m Celso Santos!
 
