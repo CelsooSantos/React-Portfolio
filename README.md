@@ -1,4 +1,4 @@
-[**Main Overview**](#) | [**Technical Documentation**](./docs/documentation.md)
+[**Main Overview**](#) | [**Technical Documentation**](./documentation.md)
 
 Hi, I’m Celso Santos!
 
