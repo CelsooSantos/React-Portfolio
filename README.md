@@ -1,5 +1,4 @@
 [**Main Overview**](#) | [**Technical Documentation**](./DOCUMENTATION.md)
-=======
 
 Hi, I’m Celso Santos!
 
