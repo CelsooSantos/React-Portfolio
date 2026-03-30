@@ -1,4 +1,4 @@
-[**Main Overview**](#) | [**Technical Documentation**](./docs/documentation.md)
+[**Main Overview**](./readme.md) | [**Technical Documentation**](#)
 
 # Project Documentation
 
