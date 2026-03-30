@@ -1,7 +1,5 @@
 "use client";
-import { useEffect } from "react";
 import Project from "./project";
-import Buttons from "../buttons/page";
 import { useTranslations } from "next-intl";
 
 type ExperienceProps = {
@@ -9,19 +7,6 @@ type ExperienceProps = {
 };
 
 const Experience = ({ title }: ExperienceProps) => {
-    
-    useEffect(() => {
-        const fetchData = async() => {
-            if (document.body.classList.contains('dark-mode')) {
-                console.log('Element contains class');
-            } else {
-                console.log('Element does NOT contain class');
-                console.log(document.body);
-                console.log(document.body.classList);
-            }
-        }
-        fetchData();
-    }, [Buttons]);
 
     const experienceT = useTranslations('Experience');
     const experiences = ["Experience1", "Experience2", "Experience3", "Experience4"]; //Adding experiences requires also adding the title here 

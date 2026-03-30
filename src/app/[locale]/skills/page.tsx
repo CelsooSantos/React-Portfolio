@@ -103,7 +103,7 @@ const skillListsOOP: SkillLists[] = [{
     skillName: "Python"
 }]
 
-function skillLists(list: SkillLists[], category: any): ReactNode {
+function skillLists(list: SkillLists[], category: ReactNode): ReactNode {
     let elementHTML = list.map(
         (item) =>
             <div className="flex items-center justify-start" key={item.id}>

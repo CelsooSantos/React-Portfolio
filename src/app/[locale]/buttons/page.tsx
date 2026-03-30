@@ -7,7 +7,6 @@ import { useTheme } from 'next-themes';
 
 
 const Buttons = () => { 
-    const router = useRouter();
     const pathname = usePathname();
     const locale = useLocale();
     
